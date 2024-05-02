@@ -225,13 +225,13 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
         BOOL evaluated = SecTrustEvaluateWithError(trust, &error);
         
         if (!evaluated && error) {
-            NSLog(@"Error evaluating trust: %@", error);
+            NSLog(@"macOS-Screensaver-Cert-Bug:Error evaluating trust: %@", error);
 //            CFRelease(error);
         }
 //        else {
             CFArrayRef certificateChain = SecTrustCopyCertificateChain(trust);
             CFIndex certificateCount = CFArrayGetCount(certificateChain);
-            NSLog(@"Number of certificates in trust: %ld", certificateCount);
+            NSLog(@"macOS-Screensaver-Cert-Bug:Number of certificates in trust: %ld", certificateCount);
             
             for (CFIndex i = 0; i < certificateCount; i++) {
                 SecCertificateRef certificate = (SecCertificateRef)CFArrayGetValueAtIndex(certificateChain, i);
@@ -239,7 +239,7 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
                     CFStringRef commonName = NULL;
                     OSStatus status = SecCertificateCopyCommonName(certificate, &commonName);
                     if (status == errSecSuccess && commonName) {
-                        NSLog(@"Common Name: %@", commonName);
+                        NSLog(@"macOS-Screensaver-Cert-Bug:Common Name: %@", commonName);
                         CFRelease(commonName);
                     }
                 }

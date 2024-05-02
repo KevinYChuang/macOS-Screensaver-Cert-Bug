@@ -32,7 +32,7 @@
 		4895C51F0A780E1800ABC00C /* NameAndPasswordPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NameAndPasswordPlugin.m; sourceTree = "<group>"; };
 		4895C5200A780E1800ABC00C /* NameAndPasswordPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NameAndPasswordPlugin.h; sourceTree = "<group>"; };
 		4895C52B0A780E8800ABC00C /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = /System/Library/Frameworks/SecurityInterface.framework; sourceTree = "<absolute>"; };
-		4895C5680A78111400ABC00C /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		4895C5680A78111400ABC00C /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* NameAndPassword.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NameAndPassword.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -54,7 +54,7 @@
 		089C166AFE841209C02AAC07 /* NameAndPassword */ = {
 			isa = PBXGroup;
 			children = (
-				4895C5680A78111400ABC00C /* ReadMe */,
+				4895C5680A78111400ABC00C /* ReadMe.md */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -165,6 +165,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* NameAndPassword */;

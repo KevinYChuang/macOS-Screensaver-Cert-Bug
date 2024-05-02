@@ -11,7 +11,7 @@ Follow these steps to set up the project:
 2. Run the command `security authorizationdb write system.login.fus < system.login.fus.plist` in the directory.
 
 After unlocking the screensaver and performing the privilege escalation, execute the command
-`log show --predicate 'Number of certificates in trust'`
+`log show --predicate 'message contains "macOS-Screensaver-Cert-Bug"' --last 1h`
 to observe the loss of HTTP connection certificates during screensaver unlock
 
 

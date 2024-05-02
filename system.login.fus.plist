@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>class</key>
+	<string>evaluate-mechanisms</string>
+	<key>comment</key>
+	<string>Login mechanism based rule.  Not for general use, yet.</string>
+	<key>created</key>
+	<real>718707643.947222</real>
+	<key>mechanisms</key>
+	<array/>
+	<key>modified</key>
+	<real>718707643.947222</real>
+	<key>shared</key>
+	<true/>
+	<key>tries</key>
+	<integer>10000</integer>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

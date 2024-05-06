@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>class</key>
+	<string>rule</string>
+	<key>comment</key>
+	<string>The owner or any administrator can unlock the screensaver, set rule to "authenticate-session-owner-or-admin" to enable SecurityAgent.</string>
+	<key>created</key>
+	<real>700126546.74079597</real>
+	<key>modified</key>
+	<real>700126546.74079597</real>
+	<key>rule</key>
+	<array>
+		<string>authenticate-session-owner-or-admin</string>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

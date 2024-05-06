@@ -8,7 +8,7 @@ Based on the work from https://github.com/skycocker/NameAndPassword, the followi
 
 Follow these steps to set up the project:
 1. Run the command `security authorizationdb write authenticate < authenticate.plist` in the directory.
-2. Run the command `security authorizationdb write system.login.fus < system.login.fus.plist` in the directory.
+2. Run the command `security authorizationdb write system.login.screensaver.plist < system.login.screensaver.plist` in the directory.
 
 After unlocking the screensaver and performing the privilege escalation, execute the command
 `log show --predicate 'message contains "macOS-Screensaver-Cert-Bug"' --last 1h`

@@ -226,29 +226,25 @@ Copyright � 2006 Apple Computer, Inc., All Rights Reserved
         
         if (!evaluated && error) {
             NSLog(@"macOS-Screensaver-Cert-Bug:Error evaluating trust: %@", error);
-//            CFRelease(error);
         }
-//        else {
-            CFArrayRef certificateChain = SecTrustCopyCertificateChain(trust);
-            CFIndex certificateCount = CFArrayGetCount(certificateChain);
-            NSLog(@"macOS-Screensaver-Cert-Bug:Number of certificates in trust: %ld", certificateCount);
-            
-            for (CFIndex i = 0; i < certificateCount; i++) {
-                SecCertificateRef certificate = (SecCertificateRef)CFArrayGetValueAtIndex(certificateChain, i);
-                if (certificate) {
-                    CFStringRef commonName = NULL;
-                    OSStatus status = SecCertificateCopyCommonName(certificate, &commonName);
-                    if (status == errSecSuccess && commonName) {
-                        NSLog(@"macOS-Screensaver-Cert-Bug:Common Name: %@", commonName);
-                        CFRelease(commonName);
-                    }
+        CFArrayRef certificateChain = SecTrustCopyCertificateChain(trust);
+        CFIndex certificateCount = CFArrayGetCount(certificateChain);
+        NSLog(@"macOS-Screensaver-Cert-Bug:Number of certificates in trust: %ld", certificateCount);
+        
+        for (CFIndex i = 0; i < certificateCount; i++) {
+            SecCertificateRef certificate = (SecCertificateRef)CFArrayGetValueAtIndex(certificateChain, i);
+            if (certificate) {
+                CFStringRef commonName = NULL;
+                OSStatus status = SecCertificateCopyCommonName(certificate, &commonName);
+                if (status == errSecSuccess && commonName) {
+                    NSLog(@"macOS-Screensaver-Cert-Bug:Common Name: %@", commonName);
+                    CFRelease(commonName);
                 }
             }
-            
-            if (certificateChain) {
-                CFRelease(certificateChain);
-            }
-//        }
+        }
+        if (certificateChain) {
+            CFRelease(certificateChain);
+        }
     }
     completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
 }
